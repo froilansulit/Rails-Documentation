@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Primary Meta Tags -->
+        <title>Rails Mini-Guide</title>
+        <meta name="title" content="Rails Mini-Guide">
+        <meta name="description" content="Rails is a model–view–controller framework, that provides default structures for a database, a web service, and web pages.">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://rails.netlify.app">
+        <meta property="og:title" content="Rails Mini-Guide">
+        <meta property="og:description" content="Rails is a model–view–controller framework, that provides default structures for a database, a web service, and web pages.">
+        <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ruby_On_Rails_Logo.svg/1280px-Ruby_On_Rails_Logo.svg.png">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://rails.netlify.app">
+        <meta property="twitter:title" content="Rails Mini-Guide">
+        <meta property="twitter:description" content="Rails is a model–view–controller framework, that provides default structures for a database, a web service, and web pages.">
+        <meta property="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ruby_On_Rails_Logo.svg/1280px-Ruby_On_Rails_Logo.svg.png">
+
+        <!-- Links -->
+        <link rel="icon" type="image/x-icon" href="/images/icon.png">
+        <link rel="stylesheet" href="/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/css/style.css">
+        <style>
+            .logo {
+            width: 115px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Modal Active record Data Types -->
+        <div class="modal fade" id="activeRecordDataTypes" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><span>ActiveRecord supports many different data types:</span></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul>
+                            <li>:binary</li>
+                            <li>:boolean</li>
+                            <li>:decimal</li>
+                            <li>:float</li>
+                            <li>:integer</li>
+                            <li>:primary_key</li>
+                            <li>:references</li>
+                            <li>:string</li>
+                            <li>:text</li>
+                            <li>:timestamp</li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><span class="text-danger font-weight-bold"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Ruby_On_Rails_Logo.svg/1280px-Ruby_On_Rails_Logo.svg.png" class="img-fluid logo" alt="rails-logo"></a>
+            <button class="navbar-toggler hidden-lg-up text-dark p-3" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">Menu</button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link text-danger font-weight-bold" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="https://gorails.com/setup/windows/10#linux-subsystem" target="_blank" rel="noopener noreferrer">Installation Guide<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="controllers.html">Controllers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="scaffolding.html">Scaffolding</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Important Links</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="https://stackoverflow.com/questions/185965/rails-how-to-change-the-title-of-a-page" target="_blank" rel="noopener noreferrer">Rails: How to change the title of a page?</a>
+                            <a class="dropdown-item" href="https://entrision.com/blog/formatting-dates-in-ruby/" target="_blank" rel="noopener noreferrer">Formatting Dates in Ruby</a>
+                            <a class="dropdown-item" href="https://stackoverflow.com/questions/7415982/how-do-i-get-the-current-date-time-in-dd-mm-yyyy-hhmm-format" target="_blank" rel="noopener noreferrer">How to get current date in rails?</a>
+                            <a class="dropdown-item" href="https://www.bootrails.com/blog/how-to-use-rails-flash-messages/" target="_blank" rel="noopener noreferrer">How to use Rails flash messages?</a>
+                            <a class="dropdown-item" href="https://stackoverflow.com/questions/17236122/what-is-the-difference-between-link-to-redirect-to-and-render" target="_blank" rel="noopener noreferrer">What is the difference between link_to, redirect_to, and render?</a>
+                            <a class="dropdown-item" href="https://tosbourn.com/difference-between-redirect-render-rails/" target="_blank" rel="noopener noreferrer">render VS redirect_to</a>
+                            <a class="dropdown-item" href="https://guides.rubyonrails.org/layouts_and_rendering.html" target="_blank" rel="noopener noreferrer">Rails: Layouts and rendering</a>
+                            <a class="dropdown-item" href="https://www.justinweiss.com/articles/how-rails-sessions-work/" target="_blank" rel="noopener noreferrer">How rails session works?</a>
+                            <a class="dropdown-item" href="https://www.rubyguides.com/2019/11/rails-flash-messages/" target="_blank" rel="noopener noreferrer">Flash Messages in Rails</a>
+                            <a class="dropdown-item" href="https://guides.rubyonrails.org/routing.html" target="_blank" rel="noopener noreferrer">Rails Routing</a>
+                            <a class="dropdown-item" href="https://www.rubyguides.com/2019/04/rails-render/" target="_blank" rel="noopener noreferrer">Guide to Rails Rendering</a>
+                            <a class="dropdown-item" href="https://www.rubyguides.com/2018/01/ruby-string-methods/" target="_blank" rel="noopener noreferrer">Ruby String Methods</a>
+                            <a class="dropdown-item" href="https://www.educba.com/sqlite-concat/" target="_blank" rel="noopener noreferrer">SQLite concat</a>
+                            <a class="dropdown-item" href="https://www.startuprocket.com/articles/a-quick-introduction-to-embedded-ruby-a-k-a-erb-eruby" target="_blank" rel="noopener noreferrer"> Embedded Ruby</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Active Records</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="https://guides.rubyonrails.org/active_record_validations.html" target="_blank" rel="noopener noreferrer">Active Record Validations</a>
+                            <a class="dropdown-item" href="https://apidock.com/rails/ActiveModel/Validations/HelperMethods/validates_numericality_of" target="_blank" rel="noopener noreferrer">validates_numericality_of</a>
+                            <a class="dropdown-item" href="https://guides.rubyonrails.org/active_record_querying.html#ordering" target="_blank" rel="noopener noreferrer">Active Record Query</a>
+                            <a class="dropdown-item" href="https://guides.rubyonrails.org/active_record_migrations.html" target="_blank" rel="noopener noreferrer">Active Record Migration</a>
+                            <a class="dropdown-item" href="https://guides.rubyonrails.org/association_basics.html" target="_blank" rel="noopener noreferrer">Active Record Associations</a>
+                            <a class="dropdown-item" href="https://egghead.io/lessons/ruby-on-rails-create-active-record-self-referential-relationships-in-ruby-on-rails" target="_blank" rel="noopener noreferrer">SelfJoin</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container my-5">
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h3 class="pb-2">Creating new rails project</h3>
+                    <span class="bg-light p-2">$ <span class="text-success font-weight-bold">rails new projectname</span></span>
+                    <p class="pt-3">After that, open the folder, find Gemfile, and copy it.</p>
+                    <span class="bg-light p-2"><span class="text-success font-weight-bold pr-2">gem 'rails-footnotes', '~> 5'</span>
+                    </span>
+                    <p class="pt-3">Run this in your console after pasting it into Gemfile.</p>
+                    <p class="d-flex justify-content-start col-md-2 bg-light p-2">$ <span class="pl-2 text-success font-weight-bold"> bundle install</span></p>
+                    <p>After running 'bundle install' make sure you run the following to install the appropriate files/dependencies.</p>
+                    <p class="d-flex justify-content-start bg-light p-2 col-md-4">$ <span class="pl-2 text-success font-weight-bold"> rails generate rails_footnotes:install</span></p>
+                    <p>You need to run this on your console in order to install the rails footnotes in your project. After finishing the installation, you can now start the server.</p>
+                    <p class="col-md-5 bg-light p-2">$ <span class="pl-2 text-success font-weight-bold"> rails s</span>     or <span class="pl-2 text-success font-weight-bold"> rails server -b 0.0.0.0</span> or <span class="pl-2 text-success font-weight-bold"> rails s -b 0.0.0.0</span></p>
+                    <p>If your server is already started, go to your designated server or <a href="http://127.0.0.1:3000/" target="_blank" rel="noopener noreferrer">open server</a></p>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h3 class="pb-2">Creating new model</h3>
+                    <span class="bg-light p-2">$ <span class="text-success font-weight-bold"> rails g model User first_name:string last_name:string email:string password:string age:integer</span></span>
+                    <p class="mt-3">After creating new model run this code</p>
+                    <span class="bg-light p-2">$ <span class="text-success font-weight-bold">rake db:migrate</span> OR <span class="text-success font-weight-bold">rails db:migrate</span></span>
+                    <p class="mt-3" title="We ask for your age only for statistical purposes.">ActiveRecord supports many different data types: <a href="#" class="text-link" data-toggle="modal" data-target="#activeRecordDataTypes">See more</a></p>
+                    <h3 class="pb-2">Relationship Sample</h3>
+                    <span class="bg-light p-2">$ <span class="text-success font-weight-bold">rails g model Message content:text user:references</span></span>
+                </div>
+            </div>
+        </div>
+        <script src="/js/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> 
+        <script src="/js/bootstrap.min.js"></script>
+    </body>
+</html>
