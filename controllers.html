@@ -87,7 +87,81 @@
             </div>
         </nav>
         <div class="container my-5">
-            
+            <div class="card mt-5">
+                <div class="card-body">
+                    <h3 class="pb-2">Creating new controllers</h3>
+                    <span class="bg-light p-2">rails generate controller <span class="text-muted font-weight-bold">&#60;ControllerName&#62;</span></span>
+                    <p class="pt-4">Example: <span class="bg-light p-2">$ <span class="pl-2 text-success font-weight-bold"> rails g controller Users</span>
+                        </span>
+                    </p>
+                    <p class="">You can also generate a controller with methods.</p>
+                    <span class="bg-light p-2">rails generate controller <span class="text-muted font-weight-bold">&#60;ControllerName&#62;</span> <span class="text-muted font-weight-bold">&#60;methods space separated&#62;</span></span>
+                    <p class="pt-4">Example: <span class="bg-light p-2">$ <span class="pl-2 text-success font-weight-bold"> rails g controller Users index</span>
+                        </span>
+                    </p>
+                    <p>For more information, read more:</p>
+                    <ul>
+                        <li><a href="https://guides.rubyonrails.org/layouts_and_rendering.html">Layouts and rendering</a></li>
+                        <li><a href="https://www.tutorialspoint.com/ruby-on-rails/rails-controllers.htm">Rails Controllers</a></li>
+                    </ul>
+                    
+                    <h3 class="pt-3">Rails way of Routing </h3>
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th><strong>Description</strong></th>
+                                <th><strong>URL</strong></th>
+                                <th><strong>controller#method</strong></th>
+                                <th><strong>HTTP</strong> <strong>Verb</strong></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A page that displays all the products.</td>
+                                <td>/products</td>
+                                <td>products#index</td>
+                                <td>GET</td>
+                            </tr>
+                            <tr>
+                                <td>A page that allows the user to add a new product</td>
+                                <td>/products/new</td>
+                                <td>products#new</td>
+                                <td>GET</td>
+                            </tr>
+                            <tr>
+                                <td>A URL that processes information submitted from the new page to create a product</td>
+                                <td>/products</td>
+                                <td>products#create</td>
+                                <td>POST</td>
+                            </tr>
+                            <tr>
+                                <td>A page that displays information for the product with an id of 2</td>
+                                <td>/products/2</td>
+                                <td>products#show</td>
+                                <td>GET</td>
+                            </tr>
+                            <tr>
+                                <td>A page that allows the user to edit existing product information</td>
+                                <td>/products/2/edit</td>
+                                <td>products#edit</td>
+                                <td>GET</td>
+                            </tr>
+                            <tr>
+                                <td>A URL that processes information submitted from the edit page to update a product</td>
+                                <td>/products/2</td>
+                                <td>products#update</td>
+                                <td>PATCH/PUT</td>
+                            </tr>
+                            <tr>
+                                <td>A URL that allows a product to be deleted</td>
+                                <td>/products/2</td>
+                                <td>products#destroy</td>
+                                <td>DELETE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
         <script src="/js/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> 
